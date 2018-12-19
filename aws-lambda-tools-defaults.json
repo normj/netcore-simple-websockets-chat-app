@@ -1,0 +1,7 @@
+
+{
+    "region" : "",
+    "s3-bucket" : "",
+    "template"  : "template.yaml",
+    "stack-name" : ""
+}
