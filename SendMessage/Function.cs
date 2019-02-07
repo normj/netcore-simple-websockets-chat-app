@@ -27,18 +27,17 @@ namespace SendMessage
     {
         IAmazonDynamoDB _ddbClient = new AmazonDynamoDBClient();
 
-        public async Task<APIGatewayProxyResponse> FunctionHandler(JObject request, ILambdaContext context)
+        public async Task<APIGatewayProxyResponse> FunctionHandler(APIGatewayProxyRequest request, ILambdaContext context)
         {
             try
             {
                 // Using JObject instead of APIGatewayProxyRequest till APIGatewayProxyRequest gets updated with DomainName and ConnectionId 
-                var domainName = request["requestContext"]["domainName"].ToString();
-                var stage = request["requestContext"]["stage"].ToString();
+                var domainName = request.RequestContext.DomainName;
+                var stage = request.RequestContext.Stage;
                 var endpoint = $"https://{domainName}/{stage}";
                 context.Logger.LogLine($"API Gateway management endpoint: {endpoint}");
 
-                var body = request["body"]?.ToString();
-                var message = JsonConvert.DeserializeObject<JObject>(body);
+                var message = JsonConvert.DeserializeObject<JObject>(request.Body);
                 var data = message["data"]?.ToString();
 
                 var stream = new MemoryStream(UTF8Encoding.UTF8.GetBytes(data));

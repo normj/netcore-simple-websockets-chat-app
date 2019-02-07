@@ -1,12 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnConnect", "OnConnect\OnConnect.csproj", "{1BD72495-6305-4EC3-A788-3F339E3FFF88}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnConnect", "OnConnect\OnConnect.csproj", "{1BD72495-6305-4EC3-A788-3F339E3FFF88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnDisconnect", "OnDisconnect\OnDisconnect.csproj", "{6EC3BB68-0C96-4535-AC3B-929310C94E93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnDisconnect", "OnDisconnect\OnDisconnect.csproj", "{6EC3BB68-0C96-4535-AC3B-929310C94E93}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendMessage", "SendMessage\SendMessage.csproj", "{1492235A-CC99-4641-8293-4D33CA74F3EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendMessage", "SendMessage\SendMessage.csproj", "{1492235A-CC99-4641-8293-4D33CA74F3EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonChat", "CommonChat\CommonChat.csproj", "{EE382036-9E15-4811-A063-8C4671ACD69F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonChat", "CommonChat\CommonChat.csproj", "{EE382036-9E15-4811-A063-8C4671ACD69F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6E3022A8-9F87-4ABC-8D6D-94ADBEACDE24}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		template.yaml = template.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +39,11 @@ Global
 		{EE382036-9E15-4811-A063-8C4671ACD69F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE382036-9E15-4811-A063-8C4671ACD69F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE382036-9E15-4811-A063-8C4671ACD69F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0857701F-6581-4441-B2B1-277D17FF5F99}
 	EndGlobalSection
 EndGlobal

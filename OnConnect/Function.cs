@@ -22,12 +22,12 @@ namespace OnConnect
     {
         IAmazonDynamoDB _ddbClient = new AmazonDynamoDBClient();
 
-        public async Task<APIGatewayProxyResponse> FunctionHandler(JObject request, ILambdaContext context)
+        public async Task<APIGatewayProxyResponse> FunctionHandler(APIGatewayProxyRequest request, ILambdaContext context)
         {
             try
             {
                 // Using JObject instead of APIGatewayProxyRequest till APIGatewayProxyRequest gets updated with DomainName and ConnectionId 
-                var connectionId = request["requestContext"]["connectionId"].ToString();
+                var connectionId = request.RequestContext.ConnectionId;
                 context.Logger.LogLine($"ConnectionId: {connectionId}");
 
                 var ddbRequest = new PutItemRequest
